@@ -1,3 +1,8 @@
 function NavDropDownFunct(){
-  document.getElementByClass('navIcon').appendClass('show');
+  let x = document.getElementById("topNav");
+   if (x.className === "navMain") {
+       x.className += " responsive";
+   } else {
+       x.className = "navMain";
+   }
 }
