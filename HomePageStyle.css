@@ -112,7 +112,7 @@ body {
     }
 /*User input popup*/
 .UserInputPopup{
-    visibility:hidden;
+    visibility: hidden;
     position:relative;
 }
     .UserInputPopup .show {
