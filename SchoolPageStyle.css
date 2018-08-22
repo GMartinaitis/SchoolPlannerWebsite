@@ -1,0 +1,40 @@
+.SchoolPageWrapper {
+    margin: 10%;
+    color: white;
+    word-wrap: break-word;
+    overflow:hidden;
+}
+.SchoolDisplayContainer {
+    width: 100%;
+    height: 250px;
+    background: white;
+    box-shadow: inset 4px 4px 20px 6px #555;
+    display: block;
+    overflow-y:scroll;
+}
+.SchoolPageWrapper h1 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.SchoolPageWrapper h1:not(:first-child) {
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-top: 50px;
+}
+.MyClassesFormating {
+    color: black;
+    width: 100%;
+    border-bottom: 2px groove #242425;
+    height:50px;
+}
+.MyClassesFormating h3{
+    float:left;
+    display:block;
+    padding:0px 15px 16px;
+    width:25%;
+    height:100%;
+}
+    .MyClassesFormating h3:first-child{
+        margin-left:10px;
+        border-left:2px groove black;
+    }
