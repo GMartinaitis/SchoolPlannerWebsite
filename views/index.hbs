@@ -1,0 +1,39 @@
+<div class="navMain" id="topNav">
+        <a href="#" class="currentNavItem">Home</a>
+        <a href="SchoolPage.html">School</a>
+        <a href="#">Work</a>
+        <a href="#">Projects</a>
+        <a href="JavaScript:Void(0);" class="navIcon" onclick="NavDropDownFunct()"> <!--This is hidden for >600px screen sizes.
+                                                                                        JavaScript:Void(0) returns Undefined leaving browser on same page.-->
+            <i class="fa fa-bars"></i>  <!--This is the 3 bar logo pulled from the font-awesome.min.css stylesheet-->
+        </a>
+    </div>
+    <div class="HomePageWrapper"><!--Wrapper for all elements on the home page-->
+        <div class="buttonHeaderContainer">
+            <h1>Upcoming Deadlines</h1> <!--Using h1 with additional styling for the titles of each element-->
+            <div class="UserInputPopup">
+                <form class="popupIntake" id="popUpInput" onsubmit="getUserInput(); return false;">
+                    Assignment / Event: <input type="text" name="EventToAdd" id="addedEvent"><br>
+                    Date Due / Occuring: <input type="date" name="dateOfNewEvent" id="addedEventDate"><br>
+                    Time Due: <input type="time" name="TimeOfEvent" id="TimeOfAddedEvent">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <button type="button" class="SubmitDeadlineButton" onclick="DisplayUserInputPopup()">Add A Deadline</button>
+        </div>
+
+        <div class="DisplayContainer" id="deadLinesDisplay"> <!--Using same classes for each of these and adding tags for the javascript outputs/inputs
+            <div class="deadlineContainer">
+    <div class="DeadlineLeft">
+        <p>test</p>
+    </div>
+    <div class="DeadlineRight">
+        <p>tesasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfsadfasdft</p>
+    </div>
+            </div>-->
+            </div>
+            <h1>Calendar</h1>
+            <div class="DisplayContainer" id="CalendarDisplay">
+
+            </div>
+    </div>
