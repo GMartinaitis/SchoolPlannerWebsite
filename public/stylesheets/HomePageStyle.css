@@ -1,0 +1,169 @@
+body {
+    margin: 0px; /*sets default margin to 0px*/
+    padding: 0px; /*sets default padding to 0px*/
+    background: #242425; /*background color for site*/
+    font-family: 'Palatino Linotype'; /*font for all text on site*/
+} /*parent of all content on the page*/
+/*Nav bar style*/
+.navMain {
+    background: linear-gradient(#656566, #7b7b7c, #919192);
+    width: 100%;
+    margin: 0px;
+    overflow: hidden; /*anything from child elements spilling out of this will be hidden*/
+    position: fixed; /*position relative to screen, will stay on screen in same place when scrolling*/
+    top: 0; /*augments position property. Tells it to position 0px from the top relative to the view port (screen)*/
+    z-index:3;
+}
+    .navMain a {
+        display: block; /*a tag defaults to inline wich allows them to overlap. To avoid over lapping set display:block
+            note: this actually doesnt matter as display:inline (default) and float left acheive the same thing. everything I have read sets nav bar to block so fk it.
+        */
+        float: left; /*have each menu item hug left of the screen*/
+        border-right: 1px solid white;
+        padding: 14px 16px;
+        color: white;
+        font-size: 24px;
+        text-decoration: none; /*removes hyperlink underline and affects*/
+        text-align: center;
+    }
+    .navMain .navIcon {
+        display: none; /*hide this on regular screen displays*/
+    }
+    .navMain  a:first-child {
+        border-left: 1px solid white; /*only applies to first 'a' text item in the navMain class*/
+    }
+
+    .navMain a:hover {
+        background: #242425;
+    }
+.currentNavItem {
+    background: #242425;
+}
+/*End of Top navbar for desktop*/
+/*Begin -- Responsive dropdown nav bar for smaller screens*/
+@media screen and (max-width: 600px) {
+    .navMain a:not(:first-child){display:none;} /*Hide all but Home from nav bar when sceen < 600px*/
+    .navMain a.navIcon{
+        float: right;
+        display:block; /*Display fa fa icon to the far right*/
+    }
+}
+@media screen and (max-width:600px) {
+    .navMain.responsive .navIcon {
+        position: absolute; /*Position relative to its parent element, position property is manipulated with top, left, right and bottom properties.*/
+        right: 0; /*tells this block element to position 0px on the right relative to body*/
+        top: 0; /*tells this block element to position 0px on the top relative to body*/
+    }
+    .navMain.responsive a{
+        display:block; /*a tag defaults to inline display, setting it to block forces each one on a new line*/
+        float:none; /*makes these display stacked instead of side by side*/
+        text-align: left;
+        border-bottom: 1px solid white;
+    }
+}
+/*End of responsive Dropdown*/
+.HomePageWrapper { /*Parent of all content on the page*/
+    margin: 10%; /*add a 10% margin away from the sides of viewport*/
+    color: white;
+    word-wrap: break-word;
+}
+.DisplayContainer {
+    width: 100%;
+    height: 250px;
+    background: white;
+    box-shadow: inset 4px 4px 20px 6px #555;
+    display: block;
+    overflow: scroll;
+    color: black;
+}
+.HomePageWrapper p {
+    color: black;
+    padding: 16px;
+}
+.HomePageWrapper h1 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+/*Submit deadline button*/
+.buttonHeaderContainer {
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+}
+.SubmitDeadlineButton {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding: 10px 10px 8px 10px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+}
+    .SubmitDeadlineButton:active {
+        top: 0px;
+        box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.0 );
+        background: rgba( 20, 224, 133, 1 );
+    }
+    .SubmitDeadlineButton:hover {
+        box-shadow: 0px 10px 10px rgba( 15, 165, 60, 0.2 );
+        background-color: white;
+        color: #242425;
+    }
+/*User input popup*/
+.UserInputPopup{
+    visibility: hidden;
+    position:relative;
+}
+    .UserInputPopup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1.5s;
+        animation: fadeIn 1.5s;
+    }
+
+    .UserInputPopup .popupIntake {
+        background: linear-gradient(#656566, #7b7b7c, #919192);
+        display:block;
+        padding: 10px;
+        border: 3px outset #242425;
+        border-radius:5px;
+    }
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+/*end of user input popup*/
+.deadlineContainer {
+    border-bottom: 2px solid black;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+.DeadlineLeft {
+    float: left;
+    width: 54.8%;
+    border-right: 2px solid black;
+    vertical-align: middle;
+}
+    .DeadlineLeft p {
+        padding: 10px 5px 5px 15px;
+        margin: 0px;
+        vertical-align: middle;
+
+    }
+.DeadlineRight {
+    float: right;
+    text-align: left;
+    width: 45%;
+    line-height: 25px;
+
+}
+    .DeadlineRight p {
+        padding: 10px 5px 5px 15px;
+        margin: 0px;
+    }

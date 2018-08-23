@@ -1,3 +1,6 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/HomePageStyle.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="javascripts/NavBar.js"></script>
 <div class="navMain" id="topNav">
         <a href="#" class="currentNavItem">Home</a>
         <a href="SchoolPage.html">School</a>
@@ -12,10 +15,10 @@
         <div class="buttonHeaderContainer">
             <h1>Upcoming Deadlines</h1> <!--Using h1 with additional styling for the titles of each element-->
             <div class="UserInputPopup">
-                <form class="popupIntake" id="popUpInput" onsubmit="getUserInput(); return false;">
+                <form class="popupIntake" id="popUpInput"action="/submit" method="post">
                     Assignment / Event: <input type="text" name="EventToAdd" id="addedEvent"><br>
                     Date Due / Occuring: <input type="date" name="dateOfNewEvent" id="addedEventDate"><br>
-                    Time Due: <input type="time" name="TimeOfEvent" id="TimeOfAddedEvent">
+                    Time Due: <input type="time" name="timeOfNewEvent" id="TimeOfAddedEvent">
                     <input type="submit" value="Submit">
                 </form>
             </div>
